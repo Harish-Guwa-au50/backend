@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
-const { stringify } = require('uuid');
+
 mongoose.set('strictQuery', false);
 
 mongoose.connect("mongodb+srv://Harish:12345@cluster0.gl6dy5a.mongodb.net/BE'?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, 
