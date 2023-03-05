@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>job</title>
+    <!-- <link rel="stylesheet" href="job.css"> -->
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 64, 255, 0.279);
+}
+.container{
+    max-width: 2000px;
+    margin: 0,auto;
+}
+.apply-box{
+    max-width: 900px;
+    padding: 20px;
+    padding-left: 50px;
+    background-color: rgba(245, 198, 179, 0.304);
+    margin: 0;
+    margin-top: 50px;
+    margin-left: 100px;
+    box-shadow: 4px 3px 5px rgba(1, 1, 1, 0.578);
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+}
+.form-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+   gap:20px
+
+}  
+label{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+input,select,textarea{
+    padding: 6px,10px;
+    border:4px solid  #ccc;
+    border-radius:4px;
+    font-size:20px
+}
+input:focus{
+    outline-color:rgb(38,0,225)
+}
+.button{
+ 
+   
+    margin-top: 20px;
+    /* align-items: center; */
+    background-color: rgba(102, 0, 255, 0.297);
+    border: transparent;
+    padding: 100px,20px;
+    color: white;
+    border-radius:50px;
+    font-size:25px;
+    transition: 0,3s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+
+}
+button:hover{
+    background-color:#0a9bbc;
+    border:2px solid rgba(0, 47, 255, 0.174);
+    color:black;
+}
+.tarea{
+
+    font-weight: bolder;
+    /* margin-top: 20px; */
+   
+}
+.pass{
+    margin-top: 30px;
+    font-weight: bolder;
+    /* box-sizing: border-box; */
+    /* font-size: 100px; */
+    padding-left: 0%;
+}
+.q{
+    /* padding-left: -3%; */
+    margin-left: -9%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <div class="apply-box">
+            <h2 class="re"> <u>Registration form</u></h2> 
+    <form action="/userJob" method="post"> 
+        <div class="form-container">
+        <div class="form-control"> 
+            <label for="fname"> First name</label>
+            <input type="text" name="fname" placeholder="enter your first name"   required maxlength="30">        
+        </div>   
+
+     <div class="form-control"> 
+            <label for="lname">Last  name</label>
+            <input type="text" name="lname" placeholder="enter your Last name"   required maxlength="30">     
+        </div> 
+        <div class="form-control"> 
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="enter your email"   required >     
+        </div> 
+       
+        <div class="tarea ">
+            <h3 class="add"> Address</h3>
+            <!-- <input  type="text" class =" form-control"name="address" required> -->
+             <textarea  name="address" rows="5" cols="20" placeholder="enter your address" required></textarea>
+        </div>
+        <div class="form-control"> 
+            <label for="jobrole">Job role</label>
+           <select name="jobrole" id="jobrole" required> 
+           <option value=""> select the job role</option>
+           <option value="React"> React</option> 
+           <option value="node.js"> Node .js</option>
+           <option value=" Full stack"> Full stack</option>
+           <option value="Angular"> Angular</option>
+        </select>
+         </div> 
+         <div class="form-control"> 
+            <label for="gender"> GENDER :</label>
+            <!-- <label for="gender">Male</label> 
+            <input type="radio"name= "gender"> 
+            <label for="gender">female</label> 
+            <input type="radio"name= "gender">  -->
+            <select name="gender" id="gender" required>
+                <option value=""> select the gender </option>
+                <option value="male"> Male</option>
+                <option value="female"> Female</option>
+                <option value="other"> Other</option>
+            </select> 
+         </div> 
+
+        <div class="form-control"> 
+            <label for="city"> City</label>
+            <input type="text" name="city" placeholder=" enter your city name " required/>
+        </div>
+        <div class="form-control"> 
+            <label for="pincode"> Pincode</label>
+            <input type="number" name="pincode" placeholder=" enter the pincode " required/>
+        </div>
+        <div class="form-control"> 
+            <label for="date">DOB</label>
+            <input value="1999-01-01"  type = "date" name="data" required/>
+        </div>
+        <div class="form-control ">
+            <label for="number"> Mobile Number</label>
+   
+            <input   type="number" name="number" required> 
+        </div>
+        <div class="form-control">
+            <label for="photo"> Upload your photo </label>
+            <input type="file" name="photo" required>
+        </div>
+        <div class="form-control">
+            <label for="upload"> Upload your CV </label>
+            <input type="file" name="upload" required>
+        </div>
+       
+        <div class="q">
+            <h3>Qualification </h3>
+            <table bgcolor="white">
+                <tr bgcolor="grey">
+                    <th> Standards</th>
+                    <th> Board</th>
+                    <th> Percentage</th>
+                    <th> Year of passing</th>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <th> class X</th>
+                    <th>
+                        <input type="text" name="class X" required>
+                         </th>
+                    <th> <input type="text" name="class X"  required></th>
+                    <th> <input type="text" name="class X"  required></th>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <th>Inter(First year) </th>
+                    <th><input type="text" name="2text"  required> </th>
+                    <th> <input type="text" name="2text"  required></th>
+                    <th> <input  type="text" name="2text"  required></th>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <th>Inter(Second year)  </th>
+                    <th><input type="text" name="2text" required> </th>
+                    <th> <input type="text" name="2text"  required></th>
+                    <th> <input  type="text" name="2text"  required></th>
+                </tr>
+                <tr bgcolor="lightgrey" align="center">
+                    <th>Higher Education</th>
+                    <th><input type="text" name="2text"  required> </th>
+                    <th> <input type="text" name="2text"  required></th>
+                    <th> <input  type="text" name="2text"  required></th>
+                </tr>
+            </table>
+
+        </div>
+             
+       
+        </div>
+       <div class="pass">
+    <label for="yes"> Passport</label> 
+    <select name="yes" required> 
+        <option> Select the option required </option>
+        <option> Yes</option>
+        <option> No</option>
+    </select>
+</div>
+
+        <button class="button"  > Apply Now</button>
+        
+<!-- </div> -->
+  
+</form>
+
+    </div>
+    
+    </div>
+    
+</body>
+</html>
